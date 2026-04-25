@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>プライバシーポリシー – HuePicker</title>
+    <title>Third-Party Software Notices - HuePicker</title>
     <style>
         :root {
             color-scheme: light dark;
@@ -11,6 +11,7 @@
             --fg: #1f2328;
             --muted: #57606a;
             --card: #f6f8fa;
+            --border: #d0d7de;
             --link: #0969da;
         }
 
@@ -20,26 +21,27 @@
                 --fg: #e6edf3;
                 --muted: #9da7b3;
                 --card: #161b22;
+                --border: #30363d;
                 --link: #58a6ff;
             }
         }
 
         body {
             margin: 0;
-            font-family: "Segoe UI", "Yu Gothic UI", "Meiryo UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.8;
+            font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
             background: var(--bg);
             color: var(--fg);
         }
 
         main {
-            max-width: 920px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 2rem 1rem 3rem;
         }
 
         h1, h2 {
-            line-height: 1.4;
+            line-height: 1.25;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
         }
@@ -52,113 +54,227 @@
 
         .card {
             background: var(--card);
+            border: 1px solid var(--border);
             border-radius: 10px;
             padding: 1rem;
             margin: 1rem 0;
         }
 
-        ul {
-            padding-left: 1.2rem;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.5rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 0.6rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: var(--card);
         }
 
         a {
             color: var(--link);
+            word-break: break-all;
         }
     </style>
 </head>
 <body>
     <main>
-        <h1>HuePicker プライバシーポリシー</h1>
-        <p class="meta"><strong>発効日：</strong>2026年4月25日 &nbsp;|&nbsp; <strong>最終更新日：</strong>2026年4月25日</p>
+        <h1>Third-Party Software Notices</h1>
+        <p class="meta"><strong>Product:</strong> HuePicker &nbsp;|&nbsp; <strong>Effective date:</strong> 2026-04-25</p>
 
-        <p>
-            HuePicker は、お客様のプライバシーをデフォルトで保護するよう設計されています。
-            本プライバシーポリシーは、アプリケーションがデータをどのように取り扱うかを説明します。
-        </p>
-
-        <h2>1. 個人データの収集なし</h2>
         <div class="card">
-            <p>HuePicker はユーザーの個人データを<strong>収集しません</strong>。</p>
-            <ul>
-                <li>アカウント登録なし</li>
-                <li>ユーザープロファイルの収集なし</li>
-                <li>行動トラッキングなし</li>
-                <li>分析データまたはテレメトリの収集なし</li>
-            </ul>
-        </div>
-
-        <h2>2. ネットワーク送信なし</h2>
-        <div class="card">
+            <h2>1. Purpose and Scope</h2>
             <p>
-                HuePicker はお客様のデータをいかなるサーバーにも<strong>送信しません</strong>。
-                アプリケーションはオフライン環境で完全に使用できます。
+                This document lists third-party software components for the <strong>HuePicker solution</strong>,
+                covering all projects within the solution (including <code>HuePicker</code>,
+                <code>OmniFoundation</code>, and <code>OminiUIKit</code>) and their direct dependencies,
+                based on current project dependency declarations. It is provided for attribution and
+                notice purposes in accordance with applicable open-source license requirements.
             </p>
-            <ul>
-                <li>画像・色・設定の自動アップロードなし</li>
-                <li>バックグラウンドでのデータ同期なし</li>
-                <li>コア機能にクラウド依存なし</li>
-            </ul>
         </div>
 
-        <h2>3. ローカル処理と保存</h2>
-        <p>
-            色の選択、画像の分析、関連する操作はすべてお客様のデバイス上でローカルに処理されます。
-            インポートまたは作成したデータはお客様のローカル管理下に置かれます。
-        </p>
-        <p>
-            アプリケーションは、テーマ・言語・ウィンドウ状態などの設定を以下のローカル設定ファイルに保存します：
-        </p>
         <div class="card">
-            <code>%LocalAppData%\HummingbirdColor\settings.json</code>
+            <h2>2. Third-Party Components</h2>
+            <table aria-label="Third-party component list">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Version</th>
+                        <th>License</th>
+                        <th>Source Project</th>
+                        <th>Project URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CommunityToolkit.Mvvm</td>
+                        <td>8.4.0</td>
+                        <td>MIT</td>
+                        <td>HuePicker</td>
+                        <td><a href="https://www.nuget.org/packages/CommunityToolkit.Mvvm" target="_blank" rel="noopener">https://www.nuget.org/packages/CommunityToolkit.Mvvm</a></td>
+                    </tr>
+                    <tr>
+                        <td>LLamaSharp</td>
+                        <td>0.26.0</td>
+                        <td>MIT</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://www.nuget.org/packages/LLamaSharp" target="_blank" rel="noopener">https://www.nuget.org/packages/LLamaSharp</a></td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft.Extensions.Http</td>
+                        <td>8.0.1</td>
+                        <td>MIT</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://www.nuget.org/packages/Microsoft.Extensions.Http" target="_blank" rel="noopener">https://www.nuget.org/packages/Microsoft.Extensions.Http</a></td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft.ML.OnnxRuntime.DirectML ①</td>
+                        <td>1.24.3</td>
+                        <td>MIT (ONNX Runtime); DirectML = Windows system component (Microsoft proprietary) — see note ①</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://www.nuget.org/packages/Microsoft.ML.OnnxRuntime.DirectML" target="_blank" rel="noopener">https://www.nuget.org/packages/Microsoft.ML.OnnxRuntime.DirectML</a></td>
+                    </tr>
+                    <tr>
+                        <td>OpenCV (native, bundled by OpenCvSharp4)</td>
+                        <td>see OpenCvSharp4</td>
+                        <td>BSD-3-Clause</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://opencv.org/license/" target="_blank" rel="noopener">https://opencv.org/license/</a></td>
+                    </tr>
+                    <tr>
+                        <td>OpenCvSharp4 (C# wrapper)</td>
+                        <td>4.13.0.20260308</td>
+                        <td>Apache-2.0</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://www.nuget.org/packages/OpenCvSharp4" target="_blank" rel="noopener">https://www.nuget.org/packages/OpenCvSharp4</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog</td>
+                        <td>4.3.1</td>
+                        <td>Apache-2.0</td>
+                        <td>HuePicker</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog</td>
+                        <td>4.2.0</td>
+                        <td>Apache-2.0</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog.Enrichers.Environment</td>
+                        <td>3.0.1</td>
+                        <td>Apache-2.0</td>
+                        <td>HuePicker</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog.Enrichers.Environment" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog.Enrichers.Environment</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog.Extensions.Hosting</td>
+                        <td>10.0.0</td>
+                        <td>Apache-2.0</td>
+                        <td>HuePicker</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog.Extensions.Hosting" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog.Extensions.Hosting</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog.Extensions.Hosting</td>
+                        <td>9.0.0</td>
+                        <td>Apache-2.0</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog.Extensions.Hosting" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog.Extensions.Hosting</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog.Sinks.Console</td>
+                        <td>6.1.1</td>
+                        <td>Apache-2.0</td>
+                        <td>HuePicker</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog.Sinks.Console" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog.Sinks.Console</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog.Sinks.Console</td>
+                        <td>6.0.0</td>
+                        <td>Apache-2.0</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog.Sinks.Console" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog.Sinks.Console</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog.Sinks.Debug</td>
+                        <td>3.0.0</td>
+                        <td>Apache-2.0</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog.Sinks.Debug" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog.Sinks.Debug</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog.Sinks.File</td>
+                        <td>7.0.0</td>
+                        <td>Apache-2.0</td>
+                        <td>HuePicker</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog.Sinks.File" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog.Sinks.File</a></td>
+                    </tr>
+                    <tr>
+                        <td>Serilog.Sinks.File</td>
+                        <td>6.0.0</td>
+                        <td>Apache-2.0</td>
+                        <td>OmniFoundation / OminiUIKit</td>
+                        <td><a href="https://www.nuget.org/packages/Serilog.Sinks.File" target="_blank" rel="noopener">https://www.nuget.org/packages/Serilog.Sinks.File</a></td>
+                    </tr>
+                    <tr>
+                        <td>System.Reactive</td>
+                        <td>6.1.0</td>
+                        <td>MIT</td>
+                        <td>HuePicker</td>
+                        <td><a href="https://www.nuget.org/packages/System.Reactive" target="_blank" rel="noopener">https://www.nuget.org/packages/System.Reactive</a></td>
+                    </tr>
+                    <tr>
+                        <td>WPF-UI</td>
+                        <td>4.2.0</td>
+                        <td>MIT</td>
+                        <td>HuePicker</td>
+                        <td><a href="https://www.nuget.org/packages/WPF-UI" target="_blank" rel="noopener">https://www.nuget.org/packages/WPF-UI</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <p>
-            このファイルにはアプリケーション設定のみが含まれており、個人データは含まれません。
-            アプリケーションをデフォルト状態にリセットするために、いつでも削除することができます。
-        </p>
 
-        <h2>4. 外部リンク</h2>
-        <p>
-            アプリケーションは、システムブラウザーまたはメールクライアントを通じて、
-            次の 2 種類のコンテンツを開くことがあります：
-        </p>
-        <ul>
-            <li><strong>バンドルされたローカルドキュメント</strong>（本プライバシーポリシーやサードパーティ通知など）は、
-                アプリケーションに同梱された HTML ファイルであり、ローカルの <code>file://</code> URI として
-                システムブラウザーで開かれます。ネットワークリクエストは発生しません。</li>
-            <li><strong>外部 URL またはメールアドレス</strong>（以下に記載の連絡先アドレスなど）は、
-                お客様のオペレーティングシステムの既定アプリケーションによって処理されます。
-                これらの宛先は独立して運営されており、それぞれ独自のプライバシーポリシーに従います。</li>
-        </ul>
+        <div class="card">
+            <h2>3. License Notice Disclaimer</h2>
+            <p>
+                License names in this file are provided as a practical reference based on common package metadata.
+                Official and binding license terms are defined by each component owner.
+                If a component requires additional attribution, NOTICE text, or full license text distribution,
+                those requirements should be satisfied according to the upstream license terms.
+            </p>
+            <p>
+                <strong>① Note on Microsoft.ML.OnnxRuntime.DirectML:</strong>
+                The ONNX Runtime .NET package is licensed under MIT. The DirectML backend is a Windows system
+                component provided by Microsoft under proprietary terms and is not covered by the MIT license.
+                Refer to the
+                <a href="https://learn.microsoft.com/en-us/windows/ai/directml/dml" target="_blank" rel="noopener">DirectML documentation</a>
+                for applicable terms.
+            </p>
+            <p>
+                <strong>Apache-2.0 compliance note:</strong>
+                Components listed under the Apache-2.0 license may include NOTICE files with additional
+                attribution requirements. Distributors are responsible for satisfying those requirements
+                per Section 4(d) of the Apache License, Version 2.0.
+                Full license text is available at
+                <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">https://www.apache.org/licenses/LICENSE-2.0</a>.
+            </p>
+        </div>
 
-        <h2>5. データの管理</h2>
-        <p>
-            お客様はローカルファイルおよびアプリケーションデータを管理します。
-            エクスポートされたファイルまたはローカルアプリケーションデータは、
-            オペレーティングシステムを通じていつでも削除できます。
-        </p>
-
-        <h2>6. 児童のプライバシー</h2>
-        <p>
-            HuePicker は子どもを対象としていません。具体的には、米国の
-            児童オンラインプライバシー保護法（COPPA）に基づき 13 歳未満の子ども、
-            または EU 一般データ保護規則（GDPR）第 8 条など適用法令が要求する場合は
-            16 歳未満の子どもを対象としていません。
-            アプリケーションは個人データを収集しないため、子どもに対する特別なデータ保護措置は
-            技術的には不要ですが、低年齢のユーザーには保護者の監督が推奨されます。
-        </p>
-
-        <h2>7. 本ポリシーの変更</h2>
-        <p>
-            本プライバシーポリシーは、製品の動作や法的要件が変更された場合に更新されることがあります。
-            更新版は新しい発効日をもって前版に取って代わります。
-        </p>
-
-        <h2>8. お問い合わせ</h2>
-        <p>
-            プライバシーに関するご質問は、以下の連絡先までお問い合わせください：
-            <a href="mailto:HummingbirdLabs@outlook.com">HummingbirdLabs@outlook.com</a>
-        </p>
+        <div class="card">
+            <h2>4. Contact</h2>
+            <p>
+                For third-party notice questions, please contact:
+                <a href="mailto:HummingbirdLabs@outlook.com">HummingbirdLabs@outlook.com</a>
+            </p>
+        </div>
     </main>
 </body>
 </html>
-
