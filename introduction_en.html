@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -180,8 +179,10 @@
 
     .screenshots-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      grid-template-columns: 1fr;
       gap: 28px;
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     .screenshot-card {
@@ -519,8 +520,8 @@
     <h1>Color Picking,<br><span>Reimagined for Windows</span></h1>
 
     <p class="hero-sub">
-      A precision color tool that captures any pixel on your screen or from an image,
-      presents every color format you need, and stores your palette — ready to export.
+      A precision color tool for Windows that captures any pixel on your screen or from an image,
+      converts it to every major format, and helps you explore harmonies and accessibility simulations.
     </p>
 
     <div class="hero-meta">
@@ -559,26 +560,15 @@
 
     <div class="screenshots-grid">
 
-      <!-- Screenshot 1 placeholder -->
+      <!-- Screenshot placeholder — replace the div below with an <img> tag when ready -->
       <div class="screenshot-card">
         <div class="screenshot-placeholder">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
           </svg>
-          <span>Screenshot 1 — Image Analysis &amp; Color Picking</span>
+          <span>Screenshot — Image Analysis &amp; Color Picking</span>
         </div>
         <div class="screenshot-caption">Image Analysis Hub &amp; Color Details Panel</div>
-      </div>
-
-      <!-- Screenshot 2 placeholder -->
-      <div class="screenshot-card">
-        <div class="screenshot-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <span>Screenshot 2 — Color Library &amp; Export</span>
-        </div>
-        <div class="screenshot-caption">Color Library, Grouping &amp; One-Click Export</div>
       </div>
 
     </div>
@@ -603,25 +593,25 @@
       <div class="feature-card">
         <div class="feature-icon icon-orange">🖱️</div>
         <h3>Screen Color Picker</h3>
-        <p>Click anywhere on your screen to instantly capture its exact color. A floating magnifier shows a live pixel preview so you never miss the spot.</p>
+        <p>Click anywhere on your screen to instantly capture its exact color. The app minimizes, a full-screen transparent overlay appears, and a live floating magnifier shows every pixel under your cursor.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon icon-blue">🖼️</div>
         <h3>Image Analysis Hub</h3>
-        <p>Import up to four images at once. Pan and zoom up to 8× magnification, then click any pixel to sample it with pixel-perfect precision.</p>
+        <p>Import up to four images at once (PNG, JPG, BMP, TIFF, SVG). Pan and zoom from 0.25× to 8× magnification, then click any pixel to sample it with pixel-perfect precision.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon icon-purple">🎨</div>
         <h3>Dominant Color Extraction</h3>
-        <p>HummingbirdColor automatically extracts the top five dominant colors from every imported image, giving you an instant palette at a glance.</p>
+        <p>The top five dominant colors are extracted automatically from every imported image. Click any chip to copy its HEX value instantly.</p>
       </div>
 
       <div class="feature-card">
         <div class="feature-icon icon-green">📋</div>
         <h3>Multi-Format Copy</h3>
-        <p>Copy any color in RGB, HEX, HSL, LAB, or CMYK with a single click — in the exact format your project demands.</p>
+        <p>Copy any sampled color in RGB, HEX, HSL, LAB, or CMYK with a single click — in whichever format your workflow demands.</p>
       </div>
 
       <div class="feature-card">
@@ -633,19 +623,7 @@
       <div class="feature-card">
         <div class="feature-icon icon-amber">👁️</div>
         <h3>Color Blindness Simulation</h3>
-        <p>Preview how your colors appear under four common conditions — Protanopia, Deuteranopia, Tritanopia, and Achromatopsia — for accessible design.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon icon-orange">📚</div>
-        <h3>Color Library</h3>
-        <p>Save, name, and group your favorite colors into a personal library. Organize by project or theme and retrieve any swatch in seconds.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon icon-purple">📤</div>
-        <h3>Export to JSON &amp; CSS</h3>
-        <p>Export selected library colors as structured JSON or ready-to-paste CSS custom properties — no extra steps, no copy-paste errors.</p>
+        <p>Preview how your colors look under four deficiency modes — Protanopia, Deuteranopia, Tritanopia, and Achromatopsia — applied live to both the image preview and the sampled color.</p>
       </div>
 
     </div>
@@ -749,39 +727,6 @@
   </div>
 </section>
 
-
-<!-- ══════════════════════════════════════════════
-     EXPORT
-══════════════════════════════════════════════ -->
-<section class="formats-section">
-  <div class="container">
-    <div class="section-label" style="text-align:center;">
-      <span class="overline">Export</span>
-      <div class="divider"></div>
-      <h2>Ship Your Palette Straight to Your Project</h2>
-      <p>Select any colors from your library and export with one click.</p>
-    </div>
-
-    <div class="export-box">
-      <div class="export-card json-card">
-        <h3>JSON Export</h3>
-        <pre>[
-  { "name": "Coral", "hex": "#E05C3A" },
-  { "name": "Violet", "hex": "#7C5CBF" },
-  { "name": "Sky",    "hex": "#3A8FBF" }
-]</pre>
-      </div>
-      <div class="export-card css-card">
-        <h3>CSS Custom Properties</h3>
-        <pre>:root {
-  --color-coral:  #E05C3A;
-  --color-violet: #7C5CBF;
-  --color-sky:    #3A8FBF;
-}</pre>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ══════════════════════════════════════════════
