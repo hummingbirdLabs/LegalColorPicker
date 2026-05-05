@@ -164,7 +164,44 @@
       align-items: center;
       gap: 5px;
     }
+    /* ── Download Button ───────────────────────────────────────── */
+    .download-btn-container {
+      margin-top: 44px;
+    }
 
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      background: linear-gradient(135deg, var(--brand) 0%, #ff6b4a 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      transition: all .3s ease, transform .2s ease;
+      white-space: nowrap;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(224, 92, 58, 0.3);
+    }
+
+    .download-btn:active {
+      transform: translateY(-2px);
+    }
+
+    .download-btn svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
     /* ── Screenshots section ───────────────────────────────────── */
     .screenshots-section {
       background: var(--surface);
@@ -523,6 +560,14 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         5 Languages
       </span>
+    </div>
+
+    <div class="download-btn-container">
+      <a href="https://apps.microsoft.com/detail/9nf8mgplxxlc?hl=neutral&gl=CN&ocid=pdpshare" class="download-btn" target="_blank" rel="noopener noreferrer">
+        <!-- Microsoft Store icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+        Download from Microsoft Store
+      </a>
     </div>
   </div>
 </header>
